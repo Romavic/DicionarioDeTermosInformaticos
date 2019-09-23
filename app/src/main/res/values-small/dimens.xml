@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size">10sp</dimen>
+    <dimen name="configuration_margin">1dp</dimen>
+    <dimen name="conversion_margin">1dp</dimen>
+    <dimen name="conversion_padding">2dp</dimen>
+    <dimen name="dictionary_words_padding">2dp</dimen>
+    <dimen name="dictionary_words_margin">2dp</dimen>
+    <dimen name="quiz_margin">2dp</dimen>
+    <dimen name="edit_words_padding">2dp</dimen>
+    <dimen name="edit_word_margin">2dp</dimen>
+    <dimen name="layout_about_padding">2dp</dimen>
+    <dimen name="nav_drawer">10dp</dimen>
+    <dimen name="nav_drawer_height">160dp</dimen>
+    <dimen name="structure_dictionary_padding">2dp</dimen>
+    <dimen name="structure_dictionary_height">1dp</dimen>
+
+</resources>

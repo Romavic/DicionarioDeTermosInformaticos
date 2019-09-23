@@ -1,0 +1,85 @@
+<resources>
+
+    <!-- Todo: App Name: -->
+    <string name="app_name">Termos Informáticos</string>
+
+    <!-- Todo: Activity Name: -->
+    <string name="title_activity_receive_data_dictionary_words">Dicionário</string>
+    <string name="title_activity_configuration">Configurações</string>
+    <string name="title_activity_quiz">Informática Quiz</string>
+    <string name="title_activity_save_words">Palavras Guardadas</string>
+    <string name="title_activity_conversion">Sistema de Numeração</string>
+    <string name="title_activity_edit_words">Editar Conteúdo</string>
+
+    <!--  TODO:Texts, hints... -->
+    <string name="text_size">Tamanho do Texto</string>
+    <string name="text_font">Tipo de Fonte</string>
+    <string name="edit_configuration">Salvar Configurações</string>
+    <string name="insert_number">Insira um número</string>
+    <string name="calculate">Calcular</string>
+    <string name="programmer">Programador:</string>
+    <string name="programmer_name">Romavic dos Anjos Kulipi Cornélio</string>
+
+    <!--  TODO:Navigation Drawer -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!--  TODO:Layout Create Data -->
+    <string name="layout_title_add_word">Adicionar nova Palavra</string>
+    <string name="layout_data_word">Palavra</string>
+    <string name="layout_data_meaning">Significado</string>
+    <string name="layout_save_data">Guardar</string>
+
+    <!-- TODO:Menus -->
+    <string name="menu_main_search">Procurar</string>
+    <string name="menu_data_share">Partilhar</string>
+    <string name="menu_data_save">Guardar</string>
+    <string name="menu_edit">Editar</string>
+    <string name="menu_check_actualization">Actualizar</string>
+
+    <!-- TODO:Navigation Menu -->
+    <string name="menu_navigation_configuration">Configurações</string>
+    <string name="menu_navigation_quiz">Informática Quiz</string>
+    <string name="menu_navigation_saved_words">Palavras Guardadas</string>
+    <string name="menu_navigation_conversion">Sistema de Numeração</string>
+    <string name="menu_navigation_about">Sobre</string>
+    <string name="menu_navigation_title_communication">Comunicação</string>
+    <string name="menu_navigation_share_app">Partilhar Aplicativo</string>
+    <string name="decimal">Decimal</string>
+    <string name="binary">Binário</string>
+    <string name="octal">Octal</string>
+    <string name="hexadecimal">Hexadecimal</string>
+    <string name="edit_title">Palavre</string>
+    <string name="edit_meaning">Significado</string>
+    <string name="quiz_message">Fim do Jogo! Sua pontuação é de:  </string>
+    <string name="quiz_spots">  Pontos.</string>
+    <string name="quiz_new_game">Novo Jogo</string>
+    <string name="quiz_finish">Sair</string>
+    <string name="something_wrong">Algo errado</string>
+    <string name="fill_field">Preencha o campo vázio</string>
+    <string name="enter_letter_from">Insira um letra de A até F</string>
+    <string name="value_should_be">Valor deve ser de 0 até 7</string>
+    <string name="value_should_be_">Valor deve ser de 0 até 1</string>
+    <string name="value_limit">Insira um valor no limite de 6 dígitos</string>
+    <string name="close_app">Deseja Sair da Aplicação?</string>
+    <string name="yes">Sim</string>
+    <string name="no">Não</string>
+
+    <!-- TODO: Arrays of numeric system -->
+    <string-array name="array_numeric_system">
+        <item>decimal</item>
+        <item>binary</item>
+        <item>octal</item>
+        <item>hexadecimal</item>
+    </string-array>
+
+    <!-- TODO: Arrays of text size -->
+    <array name="text_size">
+        <item>12sp</item>
+        <item>14sp</item>
+        <item>16sp</item>
+        <item>18sp</item>
+        <item>20sp</item>
+    </array>
+
+</resources>

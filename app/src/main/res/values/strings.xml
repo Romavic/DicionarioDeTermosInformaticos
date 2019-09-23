@@ -1,0 +1,85 @@
+<resources>
+
+    <!-- Todo: App Name: -->
+    <string name="app_name">Termos Informáticos</string>
+
+    <!-- Todo: Activity Name: -->
+    <string name="title_activity_receive_data_dictionary_words">Dictionary</string>
+    <string name="title_activity_configuration">Configurations</string>
+    <string name="title_activity_quiz">Computer Quiz</string>
+    <string name="title_activity_save_words">Saved words</string>
+    <string name="title_activity_conversion">Numbering System</string>
+    <string name="title_activity_edit_words">Edit Content</string>
+
+    <!--  TODO:Texts, hints... -->
+    <string name="text_size">Text Size</string>
+    <string name="text_font">Font Type</string>
+    <string name="edit_configuration">Save Configurations</string>
+    <string name="insert_number">Enter a number</string>
+    <string name="calculate">Calculate</string>
+    <string name="programmer">Programmer:</string>
+    <string name="programmer_name">Romavic dos Anjos Kulipi Cornélio</string>
+    <string name="decimal">Decimal</string>
+    <string name="binary">Binary</string>
+    <string name="octal">Octal</string>
+    <string name="hexadecimal">Hexadecimal</string>
+    <string name="edit_title">Word</string>
+    <string name="edit_meaning">Meaning</string>
+    <string name="quiz_message">Game Over! Your spots is:  </string>
+    <string name="quiz_spots">  Spots.</string>
+    <string name="quiz_new_game">New Game</string>
+    <string name="quiz_finish">Out!</string>
+    <string name="something_wrong">Something wrong</string>
+    <string name="fill_field">Fill out the vasin field</string>
+    <string name="enter_letter_from">Enter a letter from A until f</string>
+    <string name="value_should_be">Value should be from 0 to 7</string>
+    <string name="value_should_be_">Value should be from 0 to 1</string>
+    <string name="value_limit">Enter a value for the 6 digit limit</string>
+    <string name="close_app">Close App?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <!--  TODO:Navigation Drawer -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!--  TODO:Layout Create Data -->
+    <string name="layout_title_add_word">Add new word</string>
+    <string name="layout_data_word">Word</string>
+    <string name="layout_data_meaning">Meaning</string>
+    <string name="layout_save_data">Save</string>
+
+    <!-- TODO:Menus -->
+    <string name="menu_main_search">Search</string>
+    <string name="menu_data_share">Share</string>
+    <string name="menu_data_save">Save</string>
+    <string name="menu_edit">Edit</string>
+    <string name="menu_check_actualization">Update</string>
+
+    <!-- TODO:Navigation Menu -->
+    <string name="menu_navigation_configuration">Configurations</string>
+    <string name="menu_navigation_quiz">Computer Quiz</string>
+    <string name="menu_navigation_saved_words">Saved words</string>
+    <string name="menu_navigation_conversion">Numbering System</string>
+    <string name="menu_navigation_about">About</string>
+    <string name="menu_navigation_title_communication">Comunication</string>
+    <string name="menu_navigation_share_app">Share App</string>
+
+    <!-- TODO: Arrays of numeric system -->
+    <string-array name="array_numeric_system">
+        <item>decimal</item>
+        <item>binary</item>
+        <item>octal</item>
+        <item>hexadecimal</item>
+    </string-array>
+
+    <!-- TODO: Arrays of text size -->
+    <array name="text_size">
+        <item>12sp</item>
+        <item>14sp</item>
+        <item>16sp</item>
+        <item>18sp</item>
+        <item>20sp</item>
+    </array>
+
+</resources>
