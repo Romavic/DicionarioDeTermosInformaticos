@@ -28,7 +28,6 @@
         android:padding="@dimen/conversion_padding">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/input_layout_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -38,7 +37,10 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/insert_number"
                 android:textSize="@dimen/text_size"
-                android:fontFamily="@font/intro_regular"/>
+                android:fontFamily="@font/intro_regular"
+                tools:ignore="TextFields"
+                android:autofillHints=""
+                tools:targetApi="o" />
 
         </com.google.android.material.textfield.TextInputLayout>
 

@@ -6,16 +6,15 @@ import com.NFA.DicionarioDeTermosInformaticos.R;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.appcompat.widget.SearchView;
 
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-public class Activity_Save_Words extends AppCompatActivity {
+import java.util.Objects;
 
-    RecyclerView recyclerSaveWords;
+public class Activity_Save_Words extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +22,7 @@ public class Activity_Save_Words extends AppCompatActivity {
         setContentView(R.layout.activity_save_words);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,7 +31,6 @@ public class Activity_Save_Words extends AppCompatActivity {
             }
         });
 
-        recyclerSaveWords = findViewById(R.id.recyclerSaveWords);
     }
 
     @Override

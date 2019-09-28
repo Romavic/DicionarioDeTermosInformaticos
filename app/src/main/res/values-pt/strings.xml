@@ -25,10 +25,6 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <!--  TODO:Layout Create Data -->
-    <string name="layout_title_add_word">Adicionar nova Palavra</string>
-    <string name="layout_data_word">Palavra</string>
-    <string name="layout_data_meaning">Significado</string>
-    <string name="layout_save_data">Guardar</string>
 
     <!-- TODO:Menus -->
     <string name="menu_main_search">Procurar</string>
@@ -41,7 +37,6 @@
     <string name="menu_navigation_configuration">Configurações</string>
     <string name="menu_navigation_quiz">Informática Quiz</string>
     <string name="menu_navigation_saved_words">Palavras Guardadas</string>
-    <string name="menu_navigation_conversion">Sistema de Numeração</string>
     <string name="menu_navigation_about">Sobre</string>
     <string name="menu_navigation_title_communication">Comunicação</string>
     <string name="menu_navigation_share_app">Partilhar Aplicativo</string>
@@ -66,20 +61,7 @@
     <string name="no">Não</string>
 
     <!-- TODO: Arrays of numeric system -->
-    <string-array name="array_numeric_system">
-        <item>decimal</item>
-        <item>binary</item>
-        <item>octal</item>
-        <item>hexadecimal</item>
-    </string-array>
 
     <!-- TODO: Arrays of text size -->
-    <array name="text_size">
-        <item>12sp</item>
-        <item>14sp</item>
-        <item>16sp</item>
-        <item>18sp</item>
-        <item>20sp</item>
-    </array>
 
 </resources>

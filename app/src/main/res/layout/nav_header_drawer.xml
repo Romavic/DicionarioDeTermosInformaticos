@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/colorPrimary"
     android:orientation="vertical"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    tools:ignore="Overdraw">
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="@dimen/nav_drawer_height"
         android:layout_marginTop="@dimen/nav_drawer"
         android:scaleType="fitCenter"
-        android:src="@drawable/image_logo_app" />
+        android:src="@drawable/image_logo_app"
+        tools:ignore="ContentDescription" />
 
 </LinearLayout>

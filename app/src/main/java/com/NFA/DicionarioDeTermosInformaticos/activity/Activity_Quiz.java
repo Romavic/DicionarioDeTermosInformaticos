@@ -1,5 +1,6 @@
 package com.NFA.DicionarioDeTermosInformaticos.activity;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -15,28 +16,34 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.Objects;
 import java.util.Random;
 
 public class Activity_Quiz extends AppCompatActivity {
 
-    Button answer1, answer2, answer3, answer4;
-    TextView score, question;
+    private Button answer1;
+    private Button answer2;
+    private Button answer3;
+    private Button answer4;
+    private TextView score;
+    private TextView question;
 
-    private Question mQuestion = new Question();
+    private final Question mQuestion = new Question();
 
     private String mAnswer;
     private int mScore = 0;
-    private int mQuestionLenght = mQuestion.mQuestion.length;
+    private final int mQuestionLenght = mQuestion.mQuestion.length;
 
-    Random r;
+    private Random r;
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override

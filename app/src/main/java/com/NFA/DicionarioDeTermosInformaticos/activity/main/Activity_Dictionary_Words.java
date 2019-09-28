@@ -1,5 +1,6 @@
 package com.NFA.DicionarioDeTermosInformaticos.activity.main;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -37,12 +38,8 @@ import java.util.ArrayList;
 
 public class Activity_Dictionary_Words extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    RecyclerView recycler_view;
-    DrawerLayout drawer;
-    NavigationView navigationView;
-    ActionBarDrawerToggle toggle;
-    Adapter_Dictionary_Words adapter_dictionary_words;
-    FloatingActionButton fab;
+    private DrawerLayout drawer;
+    private Adapter_Dictionary_Words adapter_dictionary_words;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,11 +47,11 @@ public class Activity_Dictionary_Words extends AppCompatActivity implements Navi
         setContentView(R.layout.activity_dictionary_words);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        
         drawer = findViewById(R.id.drawer_layout);
-        navigationView = findViewById(R.id.nav_view);
-        recycler_view = findViewById(R.id.recyclerView);
-        fab = findViewById(R.id.fab);
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        RecyclerView recycler_view = findViewById(R.id.recyclerView);
+        FloatingActionButton fab = findViewById(R.id.fab);
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,14 +60,14 @@ public class Activity_Dictionary_Words extends AppCompatActivity implements Navi
                 View layout = inflater.inflate(R.layout.custom_toast, (ViewGroup) findViewById(R.id.customToast));
 
                 Toast toast = new Toast(getApplicationContext());
-               /* toast.setGravity(Gravity.NO_GRAVITY, 0, 0);*/
+                /* toast.setGravity(Gravity.NO_GRAVITY, 0, 0);*/
                 toast.setDuration(Toast.LENGTH_SHORT);
                 toast.setView(layout);
                 toast.show();
             }
         });
 
-        toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
@@ -4915,7 +4912,7 @@ public class Activity_Dictionary_Words extends AppCompatActivity implements Navi
         return true;
     }
 
-    @SuppressWarnings("StatementWithEmptyBody")
+    @SuppressWarnings("CatchMayIgnoreException")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         int id = item.getItemId();
@@ -4938,7 +4935,7 @@ public class Activity_Dictionary_Words extends AppCompatActivity implements Navi
 
         } else if (id == R.id.nav_about) {
             AlertDialog.Builder mBuilder = new AlertDialog.Builder(Activity_Dictionary_Words.this);
-            View view = getLayoutInflater().inflate(R.layout.layout_about, null);
+            @SuppressLint("InflateParams") View view = getLayoutInflater().inflate(R.layout.layout_about, null);
             mBuilder.setView(view);
             AlertDialog dialog = mBuilder.create();
             dialog.show();

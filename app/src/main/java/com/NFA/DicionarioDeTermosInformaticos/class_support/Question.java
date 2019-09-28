@@ -2,7 +2,7 @@ package com.NFA.DicionarioDeTermosInformaticos.class_support;
 
 public class Question {
 
-    public String mQuestion[] = {
+    public final String[] mQuestion = {
 
             "Qual foi o primeiro Sistema Operativo(SO) desenvolvido para computadores?",
             "O que é o ábaco?",
@@ -15,7 +15,7 @@ public class Question {
             "Para ser um bom programador, é necessário ter as bases de matemática?",
     };
 
-    private String mChoices[][] = {
+    private final String[][] mChoices = {
 
             {"Windows Xp", "Ubuntu", "Windows Vista", "Ms DOS",},
             {"Hardware de contagem númerica", "Sistema Operativo (SO)", "Armadura de Madeira", "Balança",},
@@ -29,35 +29,29 @@ public class Question {
 
     };
 
-    public String mCorrectAnswer[] = {"Ms DOS", "Hardware de contagem númerica", "Rangel", "Informação e Automática", "Unidade Central de Processamento", "1ª Geração", "Teclado", "1; 0", "Sim"};
+    private final String[] mCorrectAnswer = {"Ms DOS", "Hardware de contagem númerica", "Rangel", "Informação e Automática", "Unidade Central de Processamento", "1ª Geração", "Teclado", "1; 0", "Sim"};
 
     public String getQuestion(int a) {
-        String question = mQuestion[a];
-        return question;
+        return mQuestion[a];
     }
 
     public String getChoice1(int a) {
-        String choice = mChoices[a][0];
-        return choice;
+        return mChoices[a][0];
     }
 
     public String getChoice2(int a) {
-        String choice = mChoices[a][1];
-        return choice;
+        return mChoices[a][1];
     }
 
     public String getChoice3(int a) {
-        String choice = mChoices[a][2];
-        return choice;
+        return mChoices[a][2];
     }
 
     public String getChoice4(int a) {
-        String choice = mChoices[a][3];
-        return choice;
+        return mChoices[a][3];
     }
 
     public String getCorrectAnswer(int a) {
-        String answer = mCorrectAnswer[a];
-        return answer;
+        return mCorrectAnswer[a];
     }
 }

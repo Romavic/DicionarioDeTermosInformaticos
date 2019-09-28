@@ -22,9 +22,9 @@ import java.util.List;
 
 public class Adapter_Dictionary_Words extends RecyclerView.Adapter<Adapter_Dictionary_Words.Holder_Dictionary_Words> {
 
-    private Context context;
-    private List<Model_Dictionary_Words> modelDictionaryWordsList;
-    private ArrayList<Model_Dictionary_Words> arrayList;
+    private final Context context;
+    private final List<Model_Dictionary_Words> modelDictionaryWordsList;
+    private final ArrayList<Model_Dictionary_Words> arrayList;
 
     public Adapter_Dictionary_Words(Context context, List<Model_Dictionary_Words> modelDictionaryWordsList) {
         this.context = context;
@@ -50,7 +50,7 @@ public class Adapter_Dictionary_Words extends RecyclerView.Adapter<Adapter_Dicti
 
         holderDictionaryWords.setMeaningClickListener(new MeaningClickListener() {
             @Override
-            public void meaningItemClick(View view, int position) {
+            public void meaningItemClick(int position) {
                 String title_dictionary_words = modelDictionaryWordsList.get(position).getTitle();
                 String description_dictionary_words = modelDictionaryWordsList.get(position).getMeaning();
 
@@ -70,8 +70,8 @@ public class Adapter_Dictionary_Words extends RecyclerView.Adapter<Adapter_Dicti
 
     public class Holder_Dictionary_Words extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-        TextView holder_title;
-        TextView holder_meaning;
+        final TextView holder_title;
+        final TextView holder_meaning;
 
         private MeaningClickListener meaningClickListener;
 
@@ -84,7 +84,7 @@ public class Adapter_Dictionary_Words extends RecyclerView.Adapter<Adapter_Dicti
 
         @Override
         public void onClick(View view) {
-            this.meaningClickListener.meaningItemClick(view, getLayoutPosition());
+            this.meaningClickListener.meaningItemClick(getLayoutPosition());
         }
 
         void setMeaningClickListener(MeaningClickListener clickListener) {
@@ -93,7 +93,7 @@ public class Adapter_Dictionary_Words extends RecyclerView.Adapter<Adapter_Dicti
     }
 
     interface MeaningClickListener {
-        void meaningItemClick(View view, int pos);
+        void meaningItemClick(int pos);
     }
 
     public void filter(String text) {

@@ -30,7 +30,9 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/intro_regular"
                     android:hint="@string/edit_title"
-                    android:textSize="@dimen/text_size" />
+                    android:textSize="@dimen/text_size"
+                    tools:ignore="TextFields"
+                    android:importantForAutofill="no" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -46,7 +48,9 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/intro_regular"
                     android:hint="@string/edit_meaning"
-                    android:textSize="@dimen/text_size" />
+                    android:textSize="@dimen/text_size"
+                    tools:ignore="TextFields"
+                    android:importantForAutofill="no" />
 
             </com.google.android.material.textfield.TextInputLayout>
 

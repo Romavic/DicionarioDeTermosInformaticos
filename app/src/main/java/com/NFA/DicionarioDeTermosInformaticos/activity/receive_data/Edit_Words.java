@@ -6,7 +6,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,8 +16,6 @@ import com.NFA.DicionarioDeTermosInformaticos.R;
 import java.util.Objects;
 
 public class Edit_Words extends AppCompatActivity {
-
-    EditText editTitle, editMeaning;
 
 
     @Override
@@ -36,8 +33,8 @@ public class Edit_Words extends AppCompatActivity {
             }
         });
 
-        editTitle = findViewById(R.id.editTitle);
-        editMeaning = findViewById(R.id.editMeaning);
+        EditText editTitle = findViewById(R.id.editTitle);
+        EditText editMeaning = findViewById(R.id.editMeaning);
 
         Intent intent = getIntent();
         String receiveDataTitle = intent.getStringExtra("title");
@@ -57,9 +54,6 @@ public class Edit_Words extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
 
-        if(id == R.id.menu_check){
-
-        }
         return super.onOptionsItemSelected(item);
     }
 }

@@ -1,19 +1,18 @@
 package com.NFA.DicionarioDeTermosInformaticos.models;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 public class Model_Dictionary_Words {
 
-    private String title;
-    private String meaning;
-    private String image;
+    @Expose
+    @SerializedName("title")private String title;
+    @Expose
+    @SerializedName("meaning")private String meaning;
+    @Expose
+    @SerializedName("image")private String image;
 
     public Model_Dictionary_Words() {
-
-    }
-
-    public Model_Dictionary_Words(String title, String meaning, String image) {
-        this.title = title;
-        this.meaning = meaning;
-        this.image = image;
     }
 
     public String getTitle() {
@@ -32,11 +31,4 @@ public class Model_Dictionary_Words {
         this.meaning = meaning;
     }
 
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
-    }
 }

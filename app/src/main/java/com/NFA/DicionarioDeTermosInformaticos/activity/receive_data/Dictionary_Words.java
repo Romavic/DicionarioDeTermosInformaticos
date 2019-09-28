@@ -20,7 +20,8 @@ public class Dictionary_Words extends AppCompatActivity {
 
     private static final String TAG = "Exception";
     
-    TextView receiveTitle, receiveMeaning;
+    private TextView receiveTitle;
+    private TextView receiveMeaning;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

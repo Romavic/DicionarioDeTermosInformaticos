@@ -1,5 +1,6 @@
 package com.NFA.DicionarioDeTermosInformaticos.activity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -14,14 +15,17 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.NFA.DicionarioDeTermosInformaticos.R;
 
+import java.util.Objects;
+
 public class Activity_Conversion extends AppCompatActivity {
 
-    EditText inputText;
-    TextView textBinary, decimal, textOctal, textHexadecimal;
-    Button btnCalculate;
-    Spinner spinConversionSelection;
-    String[] spinConversionItem = {"Decimal", "Binary", "Octal", "Hexadecimal"};
-    int spinPosition = 0;
+    private EditText inputText;
+    private TextView textBinary;
+    private TextView decimal;
+    private TextView textOctal;
+    private TextView textHexadecimal;
+    private final String[] spinConversionItem = {"Decimal", "Binary", "Octal", "Hexadecimal"};
+    private int spinPosition = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +33,7 @@ public class Activity_Conversion extends AppCompatActivity {
         setContentView(R.layout.activity_conversion);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,9 +46,9 @@ public class Activity_Conversion extends AppCompatActivity {
         decimal = findViewById(R.id.textDecimal);
         textOctal = findViewById(R.id.textOctal);
         textHexadecimal = findViewById(R.id.textHexadecimal);
-        btnCalculate = findViewById(R.id.btnCalculate);
+        Button btnCalculate = findViewById(R.id.btnCalculate);
         inputText = findViewById(R.id.inputText);
-        spinConversionSelection = findViewById(R.id.spinConversionSelection);
+        Spinner spinConversionSelection = findViewById(R.id.spinConversionSelection);
 
         ArrayAdapter<String> spinAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, spinConversionItem);
         spinConversionSelection.setAdapter(spinAdapter);
@@ -78,10 +82,11 @@ public class Activity_Conversion extends AppCompatActivity {
         });
     }
 
+    @SuppressLint("SetTextI18n")
     private void calculateBinary() {
         String value = inputText.getText().toString();
 
-        if (!checkingInputValidation()) {
+        if (checkingInputValidation()) {
             switch (spinPosition) {
                 case 0:
                     try {
@@ -115,10 +120,11 @@ public class Activity_Conversion extends AppCompatActivity {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private void calculateDecimal() {
         String value = inputText.getText().toString();
 
-        if (!checkingInputValidation()) {
+        if (checkingInputValidation()) {
             switch (spinPosition) {
                 case 0:
                     try {
@@ -152,10 +158,11 @@ public class Activity_Conversion extends AppCompatActivity {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private void calculateOctal() {
         String value = inputText.getText().toString();
 
-        if (!checkingInputValidation()) {
+        if (checkingInputValidation()) {
             switch (spinPosition) {
                 case 0:
                     try {
@@ -193,10 +200,11 @@ public class Activity_Conversion extends AppCompatActivity {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private void calculateHexadecimal() {
         String value = inputText.getText().toString();
 
-        if (!checkingInputValidation()) {
+        if (checkingInputValidation()) {
             switch (spinPosition) {
                 case 0:
                     try {
@@ -236,24 +244,24 @@ public class Activity_Conversion extends AppCompatActivity {
 
         if (inputText.getText().toString().trim().isEmpty()) {
             inputText.setError(getString(R.string.fill_field));
-            return true;
+            return false;
 
         } else if (gettingInput.matches(".*[G-Z].*") || gettingInput.matches(".*[g-z].*")) {
             inputText.setError(getString(R.string.enter_letter_from));
-            return true;
+            return false;
 
         } else if (spinPosition == 2 && gettingInput.matches(".*[8-9].*")) {
             inputText.setError(getString(R.string.value_should_be));
-            return true;
+            return false;
 
         } else if (spinPosition == 1 && gettingInput.matches(".*[2-9].*")) {
             inputText.setError(getString(R.string.value_should_be_));
-            return true;
+            return false;
 
         } else if (gettingInput.length() > 15) {
             inputText.setError(getString(R.string.value_limit));
-            return true;
+            return false;
         }
-        return false;
+        return true;
     }
 }
