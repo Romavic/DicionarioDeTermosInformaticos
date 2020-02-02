@@ -11,10 +11,9 @@
             android:title="@string/menu_navigation_configuration" />
 
         <item
-            android:id="@+id/nav_quiz"
-            android:icon="@drawable/icon_quiz"
-            android:title="@string/menu_navigation_quiz"
-            android:visible="false"/>
+            android:id="@+id/nav_conversion"
+            android:icon="@drawable/icon_conversion"
+            android:title="@string/title_activity_conversion" />
 
         <item
             android:id="@+id/nav_save"
@@ -22,9 +21,9 @@
             android:title="@string/menu_navigation_saved_words" />
 
         <item
-            android:id="@+id/nav_conversion"
-            android:icon="@drawable/icon_conversion"
-            android:title="@string/title_activity_conversion" />
+            android:id="@+id/nav_share"
+            android:icon="@drawable/icon_share"
+            android:title="@string/menu_navigation_share_app" />
 
         <item
             android:id="@+id/nav_about"
@@ -32,15 +31,5 @@
             android:title="@string/menu_navigation_about" />
 
     </group>
-
-    <item android:title="@string/menu_navigation_title_communication">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/icon_share"
-                android:title="@string/menu_navigation_share_app" />
-
-        </menu>
-    </item>
 
 </menu>
