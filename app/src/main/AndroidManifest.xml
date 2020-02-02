@@ -15,6 +15,7 @@
         <activity
             android:name="ao.dicionariodetermosinformaticos.romavicdosanjoskc.view.activity.DictionaryWordActivity"
             android:label="@string/app_name"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,22 +26,26 @@
         <activity
             android:name="ao.dicionariodetermosinformaticos.romavicdosanjoskc.view.activity.ConfigurationAppActivity"
             android:label="@string/title_activity_configuration"
+            android:parentActivityName=".view.activity.DictionaryWordActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
             android:name="ao.dicionariodetermosinformaticos.romavicdosanjoskc.view.activity.ConversionActivity"
             android:label="@string/title_activity_conversion"
+            android:parentActivityName=".view.activity.DictionaryWordActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name="ao.dicionariodetermosinformaticos.romavicdosanjoskc.view.activity.Activity_Quiz"
-            android:label="@string/title_activity_quiz"
-            android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
             android:name="ao.dicionariodetermosinformaticos.romavicdosanjoskc.view.activity.WordsSavedActivity"
             android:label="@string/title_activity_save_words"
+            android:parentActivityName=".view.activity.DictionaryWordActivity"
             android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
             android:name="ao.dicionariodetermosinformaticos.romavicdosanjoskc.view.activity.ReceiveDictionaryWordActivity"
             android:label="@string/title_activity_receive_data_dictionary_words"
+            android:parentActivityName=".view.activity.DictionaryWordActivity"
             android:theme="@style/AppTheme.NoActionBar" />
 
     </application>

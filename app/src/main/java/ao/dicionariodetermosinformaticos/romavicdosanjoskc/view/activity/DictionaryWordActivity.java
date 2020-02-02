@@ -42,6 +42,7 @@ public class DictionaryWordActivity extends AppCompatActivity
         setContentView(R.layout.activity_dictionary_word);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        toolbar.setTitleTextAppearance(this, R.style.CustomStyle1);
 
         drawer = findViewById(R.id.drawer_dictionary_word);
         recycler = findViewById(R.id.recycler_dictionary_word);

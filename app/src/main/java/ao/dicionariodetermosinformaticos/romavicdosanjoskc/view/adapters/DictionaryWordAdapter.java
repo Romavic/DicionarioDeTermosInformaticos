@@ -41,15 +41,31 @@ public class DictionaryWordAdapter extends RecyclerView.Adapter<DictionaryWordAd
 
     @Override
     public void onBindViewHolder(@NonNull DictionaryWordHolder holderDictionaryWords, final int position) {
-
         Animation animation = AnimationUtils.loadAnimation(context, android.R.anim.slide_in_left);
         holderDictionaryWords.itemView.startAnimation(animation);
 
         holderDictionaryWords.holder_title.setText(modelDictionaryWordsList.get(position).getTitle());
 
-        holderDictionaryWords.itemView.setOnClickListener(view -> {
-            dictionaryWordClick.onClick(modelDictionaryWordsList.get(position));
-        });
+        holderDictionaryWords.itemView.setOnClickListener(view -> dictionaryWordClick.onClick(modelDictionaryWordsList.get(position)));
+    }
+
+    @Override
+    public int getItemCount() {
+        return modelDictionaryWordsList.size();
+    }
+
+    public interface DictionaryWordClick {
+        void onClick(DictionaryWordModel dictionaryWordModel);
+    }
+
+    class DictionaryWordHolder extends RecyclerView.ViewHolder {
+
+        TextView holder_title;
+
+        DictionaryWordHolder(@NonNull View itemView) {
+            super(itemView);
+            holder_title = itemView.findViewById(R.id.structure_title);
+        }
     }
 
     public void filter(String text) {
@@ -70,40 +86,5 @@ public class DictionaryWordAdapter extends RecyclerView.Adapter<DictionaryWordAd
             modelDictionaryWordsList.addAll(result);
         }
         notifyDataSetChanged();
-    }
-
-    @Override
-    public int getItemCount() {
-        return modelDictionaryWordsList.size();
-    }
-
-    public interface DictionaryWordClick {
-        void onClick(DictionaryWordModel dictionaryWordModel);
-    }
-
-    interface MeaningClickListener {
-        void meaningItemClick(int pos);
-    }
-
-    public class DictionaryWordHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-
-        final TextView holder_title;
-
-        private MeaningClickListener meaningClickListener;
-
-        DictionaryWordHolder(@NonNull View itemView) {
-            super(itemView);
-            this.holder_title = itemView.findViewById(R.id.structure_title);
-            itemView.setOnClickListener(this);
-        }
-
-        @Override
-        public void onClick(View view) {
-            this.meaningClickListener.meaningItemClick(getLayoutPosition());
-        }
-
-        void setMeaningClickListener(MeaningClickListener clickListener) {
-            this.meaningClickListener = clickListener;
-        }
     }
 }

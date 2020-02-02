@@ -11,22 +11,22 @@
         android:id="@+id/btnSaveConfiguration"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/spinnerTypeFont"
+        android:layout_below="@+id/spinner_text_font"
         android:layout_margin="@dimen/configuration_margin"
         android:background="@drawable/background_style_blue"
         android:text="@string/edit_configuration"
         android:textSize="@dimen/text_size"
-        android:fontFamily="@font/intro_regular"/>
+        android:fontFamily="@font/nunito_sans_black" />
 
     <Spinner
-        android:id="@+id/spinnerTypeFont"
+        android:id="@+id/spinner_text_font"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/textFont"
         android:layout_margin="@dimen/configuration_margin" />
 
     <Spinner
-        android:id="@+id/spinnerIncreaseText"
+        android:id="@+id/spinner_text_size"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textWeight"
@@ -40,17 +40,17 @@
         android:layout_margin="@dimen/configuration_margin"
         android:text="@string/text_size"
         android:textSize="@dimen/text_size"
-        android:fontFamily="@font/intro_regular"/>
+        android:fontFamily="@font/nunito_sans_semi_bold" />
 
     <TextView
         android:id="@+id/textFont"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/spinnerIncreaseText"
+        android:layout_below="@id/spinner_text_size"
         android:layout_margin="@dimen/configuration_margin"
         android:text="@string/text_font"
         android:textSize="@dimen/text_size"
-        android:fontFamily="@font/intro_regular"/>
+        android:fontFamily="@font/nunito_sans_semi_bold" />
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar"

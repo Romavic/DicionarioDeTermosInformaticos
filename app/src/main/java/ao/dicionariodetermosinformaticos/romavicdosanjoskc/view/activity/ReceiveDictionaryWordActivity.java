@@ -28,7 +28,6 @@ public class ReceiveDictionaryWordActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
         toolbar.setNavigationOnClickListener(v -> finish());
 
         receiveTitle = findViewById(R.id.receiveTitle);

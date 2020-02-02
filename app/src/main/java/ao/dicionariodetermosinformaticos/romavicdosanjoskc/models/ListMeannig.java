@@ -4,8 +4,10 @@ import java.util.ArrayList;
 
 public class ListMeannig {
 
+
     public static ArrayList<DictionaryWordModel> ListAllMeannig() {
         ArrayList<DictionaryWordModel> listMeaningDictionary = new ArrayList<>();
+
         DictionaryWordModel p;
 
         p = new DictionaryWordModel();

@@ -19,7 +19,6 @@
 
     <style name="CustomStyle1">
         <item name="android:fontFamily">@font/nunito_sans_semi_bold</item>
-
     </style>
 
 </resources>
