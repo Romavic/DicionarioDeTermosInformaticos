@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "381053117182",
+    "firebase_url": "https://dicionariodetermosinform-650ba.firebaseio.com",
+    "project_id": "dicionariodetermosinform-650ba",
+    "storage_bucket": "dicionariodetermosinform-650ba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:381053117182:android:a20ac8398daac4cfb5bbaf",
+        "android_client_info": {
+          "package_name": "ao.dicionariodetermosinformaticos.romavicdosanjoskc.ao.dicionariodetermosinformaticos.romavicdosanjoskc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "381053117182-fdjtr22rn30qcngb3nin99mjts5pl5h1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZY4keM2p59wRmUgiazzEExqqNtsj8EiU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "381053117182-fdjtr22rn30qcngb3nin99mjts5pl5h1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
