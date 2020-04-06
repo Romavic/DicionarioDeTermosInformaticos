@@ -2,7 +2,6 @@ package ao.dicionariodetermosinformaticos.romavicdosanjoskc.view.activity
 
 import android.os.Bundle
 import android.view.Menu
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.appcompat.widget.Toolbar
@@ -16,7 +15,7 @@ class WordsSavedActivity : AppCompatActivity() {
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
         Objects.requireNonNull(supportActionBar)?.setDisplayHomeAsUpEnabled(true)
-        toolbar.setNavigationOnClickListener { v: View? -> finish() }
+        toolbar.setNavigationOnClickListener { finish() }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
