@@ -47,7 +47,7 @@ class DictionaryWordActivity : AppCompatActivity(), NavigationView.OnNavigationI
         navigation?.setNavigationItemSelectedListener(this)
 
         presenter = DictionaryWordPresenter(this)
-        presenter!!.dictionaryWord
+        presenter!!.dictionaryWord()
     }
 
     override fun onBackPressed() {
